@@ -2,8 +2,11 @@ import cv2
 import uuid
 import time
 import json
+import yaml
 import base64
 import requests
+
+
 
 
 def maskingImage(json_data, path):
@@ -81,8 +84,13 @@ def maskingImage(json_data, path):
 
 
 def callAPI(file_path):
-    api_url = 'https://924c8fb2388f482286082a6d1b4c0096.apigw.ntruss.com/custom/v1/7203/18f1255e3f7344a3ba6b47c30c585c48baf1b1d0ace3872b38658de130772f6e/general'
-    secret_key = 'RFdxbnNxdWhLdlVuQU1ubVJxWURacGtMdkRjQWZDcmo='
+    with open('key.yml') as f:
+        key = yaml.load(f, Loader=yaml.FullLoader)
+        a = (key['secret']['a'])
+        b = (key['secret']['b'])
+
+    api_url = a
+    secret_key = b
     image_file = file_path
     try:
         with open(image_file, 'rb') as f:

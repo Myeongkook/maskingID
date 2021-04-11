@@ -31,7 +31,7 @@ def insert_list(list_image):
 
 
 def do_masking():
-    for i in file_list[0]:
+    for i in file_list:
         try:
             api = do_something.callAPI(i)
             do_something.maskingImage(api.json(), i)
