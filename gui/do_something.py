@@ -7,10 +7,7 @@ import base64
 import requests
 
 
-
-
 def maskingImage(json_data, path):
-    success_check = 0
     for i in range(len(json_data['images'][0]['fields'])):
         id_num = json_data['images'][0]['fields'][i]['inferText']
         if '-' in id_num:
@@ -41,9 +38,6 @@ def maskingImage(json_data, path):
                     coordinates.append(
                         json_data['images'][0]['fields'][i]['boundingPoly'][
                             'vertices'][k]['y'])
-            else:
-                raise ValueError
-
             if abs(coordinates[0] - coordinates[2]) > abs(
                     coordinates[1] - coordinates[3]):
                 coordinates[0] = (coordinates[0] + coordinates[2]) / 2
@@ -53,11 +47,10 @@ def maskingImage(json_data, path):
                 cv2.rectangle(im, (
                     int(coordinates[0]), int(coordinates[1] - 10)), (
                                   int(coordinates[2]),
-                                  int(coordinates[3]) + pecentage), (255, 0, 0),
+                                  int(coordinates[3]) + pecentage), (0, 0, 0),
                               -1)
                 try:
                     cv2.imwrite(path, im)
-                    success_check += 1
                 except cv2.error as e:
                     print(e, "파일 경로에 한글은 입력할 수 없습니다.")
                     return 1
@@ -71,23 +64,22 @@ def maskingImage(json_data, path):
                               (int(coordinates[0] - 10), int(coordinates[1])),
                               (int(coordinates[2] + pecentage),
                                int(coordinates[3])),
-                              (255, 0, 0), -1)
+                              (0, 0, 0), -1)
                 try:
                     cv2.imwrite(path, im)
-                    success_check += 1
                 except cv2.error as e:
                     print(e, "파일 경로에 한글은 입력할 수 없습니다.")
                     return 1
             else:
                 pass
-    return success_check
+    return 0
 
 
 def callAPI(file_path):
     with open('key.yml') as f:
         key = yaml.load(f, Loader=yaml.FullLoader)
-        a = (key['secret']['a'])
-        b = (key['secret']['b'])
+        a = key['secret']['a']
+        b = key['secret']['b']
 
     api_url = a
     secret_key = b
