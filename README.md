@@ -144,21 +144,24 @@ def maskingImage(json_data, path):
 
 Python 코드 그대로 사용하기 좋지 않다고 생각되어 Tkinter GUI를 사용하여 코드를 알지 못해도 이 프로그램을 사용할 수 있도록 디자인하였다. 
 
-![Tkinter 모듈을 사용하여 만든 GUI - 기본적인 틀만 만들어진 형태](%E1%84%8C%E1%85%AE%E1%84%86%E1%85%B5%E1%86%AB%E1%84%83%E1%85%B3%E1%86%BC%E1%84%85%E1%85%A9%2000d71/Screen_Shot_2021-04-11_at_23.41.26.png)
+![Screen_Shot_2021-04-11_at_23 41 26](https://user-images.githubusercontent.com/52430916/163781449-73bd64ad-ad09-4ae8-8947-635bba68166a.png)
 
 Tkinter 모듈을 사용하여 만든 GUI - 기본적인 틀만 만들어진 형태
 
 파일 또는 폴더를 불러와 마스킹처리하고 처리가 끝난 후 리스트를 비우도록 하였다.
 
-![Tkinter 모듈을 사용하여 만든 GUI - 여러 파일을 추가하여 일괄처리할 수 있다.](%E1%84%8C%E1%85%AE%E1%84%86%E1%85%B5%E1%86%AB%E1%84%83%E1%85%B3%E1%86%BC%E1%84%85%E1%85%A9%2000d71/Screen_Shot_2021-04-11_at_23.44.27.png)
+![Screen_Shot_2021-04-11_at_23 44 27](https://user-images.githubusercontent.com/52430916/163781510-917e5fb4-6429-4b18-812d-ffa65652d4ad.png)
+
 
 Tkinter 모듈을 사용하여 만든 GUI - 여러 파일을 추가하여 일괄처리할 수 있다.
 
-![프로그램을 사용한 결과 - 스캔한 이미지의 결과물](%E1%84%8C%E1%85%AE%E1%84%86%E1%85%B5%E1%86%AB%E1%84%83%E1%85%B3%E1%86%BC%E1%84%85%E1%85%A9%2000d71/Screen_Shot_2021-04-11_at_23.59.58.png)
+![Screen_Shot_2021-04-11_at_23 59 58](https://user-images.githubusercontent.com/52430916/163781669-78dbe784-d2f0-4cb1-b989-3fa0b6d0b692.png)
+
 
 프로그램을 사용한 결과 - 스캔한 이미지의 결과물
 
-![프로그램을 사용한 결과 - 스마트폰으로 촬영한 이미지의 결과물](%E1%84%8C%E1%85%AE%E1%84%86%E1%85%B5%E1%86%AB%E1%84%83%E1%85%B3%E1%86%BC%E1%84%85%E1%85%A9%2000d71/Screen_Shot_2021-04-13_at_20.00.09.png)
+![Screen_Shot_2021-04-13_at_20 00 09](https://user-images.githubusercontent.com/52430916/163781708-10cd966b-2a45-47b3-9e1a-1a4015329abf.png)
+
 
 프로그램을 사용한 결과 - 스마트폰으로 촬영한 이미지의 결과물
 
